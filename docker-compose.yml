@@ -1,0 +1,8 @@
+version: '2'
+services:
+    cli:
+        image: silintl/php7:7.2
+        volumes:
+            - ./:/data/
+        working_dir: /data
+        command: vendor/bin/behat

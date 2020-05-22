@@ -1,0 +1,5 @@
+default:
+    suites:
+        google_sheets:
+            paths:    [ "%paths.base%/google-sheets.feature" ]
+            contexts: [ Sil\GoogleSheets\features\context\GoogleSheetsContext ]

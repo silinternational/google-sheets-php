@@ -1,0 +1,18 @@
+{
+    "require": {
+        "php": "^7.2",
+        "ext-json": "*",
+        "google/apiclient": "^1.1",
+        "google/apiclient-services": "^0.83"
+    },
+    "require-dev": {
+        "behat/behat": "^3.6",
+        "roave/security-advisories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sil\\GoogleSheets\\": "./src",
+            "Sil\\GoogleSheets\\features\\": "./features"
+        }
+    }
+}
