@@ -1,6 +1,7 @@
 # Google Sheets PHP
 
-A simple library for pushing data to a Google Sheet
+A simple library for pushing data to a Google Sheet using the Google PHP API
+Client **version 1**.
 
 ## Resources
 
