@@ -1,14 +1,12 @@
 <?php
 namespace Sil\GoogleSheets\features\context;
 
-use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Behat\Context\Context;
 use Sil\GoogleSheets\GoogleSheets;
 use Sil\PhpEnv\Env;
 
 class GoogleSheetsContext implements Context
 {
-    private $exceptionThrown;
     private $googleSheets;
     
     public function __construct()
