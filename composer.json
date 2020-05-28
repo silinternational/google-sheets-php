@@ -1,4 +1,8 @@
 {
+    "name": "silinternational/google-sheets-php",
+    "description": "A simple library for pushing data to a Google Sheet using the Google PHP API Client version 1",
+    "type": "library",
+    "license": "MIT",
     "require": {
         "php": "^7.2",
         "ext-json": "*",
