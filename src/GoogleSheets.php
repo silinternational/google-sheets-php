@@ -28,7 +28,11 @@ class GoogleSheets
         Assert::fileExists($jsonAuthFilePath);
         
         $googleClient = new Google_Client();
-        $googleClient->loadServiceAccountJson($jsonAuthFilePath, $scopes);
+        $assertionCredentials = $googleClient->loadServiceAccountJson(
+            $jsonAuthFilePath,
+            $scopes
+        );
+        $googleClient->setAssertionCredentials($assertionCredentials);
         $this->sheets = new Google_Service_Sheets($googleClient);
     }
     
