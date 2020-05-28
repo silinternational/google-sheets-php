@@ -33,6 +33,7 @@ class GoogleSheets
             $scopes
         );
         $googleClient->setAssertionCredentials($assertionCredentials);
+        $googleClient->setApplicationName($applicationName);
         $this->sheets = new Google_Service_Sheets($googleClient);
     }
     
