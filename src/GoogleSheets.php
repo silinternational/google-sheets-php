@@ -39,7 +39,12 @@ class GoogleSheets
     /**
      * Append the provided data to the specified Google Sheet.
      *
-     * @param array $data
+     * @param array[] $data A nested array, where the inner arrays' entries will
+     *     go into consecutive cells in a given row. Example:
+     *     [
+     *         ['The', 'first', 'row'],
+     *         ['The', 'second', 'row'],
+     *     ]
      * @param string $spreadsheetId The Spreadsheet ID
      * @param string $tabName The name of the tab within the Google Sheet
      */
@@ -50,17 +55,20 @@ class GoogleSheets
     ) {
         Assert::isNotEmpty($spreadsheetId, 'Spreadsheet ID');
         
-        $range = sprintf('%s!A1:A1000', $tabName);
+        $range = sprintf('%s!A:A', $tabName);
         $postBody = new Google_Service_Sheets_ValueRange([
             'range' => $range,
-            'majorDimension' => 'COLUMNS',
-            'values' => [$data],
+            'majorDimension' => 'ROWS',
+            'values' => $data,
         ]);
         $this->sheets->spreadsheets_values->append(
             $spreadsheetId,
             $range,
             $postBody,
-            ['valueInputOption' => 'USER_ENTERED']
+            [
+                'valueInputOption' => 'USER_ENTERED',
+                'insertDataOption' => 'INSERT_ROWS',
+            ]
         );
     }
 }
