@@ -1,2 +1,4 @@
 composer.lock
 vendor
+credentials
+local.env

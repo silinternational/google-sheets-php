@@ -1,7 +1,9 @@
 version: '2'
 services:
-    cli:
+    test:
         image: silintl/php7:7.2
+        env_file:
+          - local.env
         volumes:
             - ./:/data/
         working_dir: /data
