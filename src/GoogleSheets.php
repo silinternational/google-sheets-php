@@ -27,13 +27,8 @@ class GoogleSheets
         Assert::isNotEmpty($applicationName, 'applicationName');
         Assert::fileExists($jsonAuthFilePath);
         
-        $jsonAuthString = \file_get_contents($jsonAuthFilePath);
-        $credentials = json_decode($jsonAuthString, true);
         $googleClient = new Google_Client();
-        $googleClient->setApplicationName($applicationName);
-        $googleClient->setScopes($scopes);
-        $googleClient->setAuthConfig($credentials);
-        $googleClient->setAccessType('offline');
+        $googleClient->loadServiceAccountJson($jsonAuthFilePath, $scopes);
         $this->sheets = new Google_Service_Sheets($googleClient);
     }
     
