@@ -7,7 +7,7 @@
         "php": "^7.2",
         "ext-json": "*",
         "google/apiclient": "^1.1",
-        "google/apiclient-services": "^0.83"
+        "google/apiclient-services": "^0.105"
     },
     "require-dev": {
         "behat/behat": "^3.6",
