@@ -6,7 +6,7 @@
     "require": {
         "php": "^7.4",
         "ext-json": "*",
-        "google/apiclient": "^1.1",
+        "google/apiclient": "^v1.1.8",
         "google/apiclient-services": "^0.176"
     },
     "require-dev": {

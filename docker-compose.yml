@@ -1,7 +1,7 @@
 version: '2'
 services:
     test:
-        image: php:7.4-apache-buster
+        image: silintl/php7-apache:7.4.19
         env_file:
           - local.env
         volumes:
