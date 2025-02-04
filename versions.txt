@@ -1,5 +1,5 @@
-behat/behat               v3.11.0            Scenario-oriented BDD framework for PHP
-google/apiclient          v1.1.9             Client library for Google APIs
-google/apiclient-services v0.176.0           Client library for Google APIs
-roave/security-advisories dev-master b311503 Prevents installation of composer packages with known security vulnerabil...
-silinternational/php-env  3.1.0              Simple PHP library for getting (or requiring) environment variables, desi...
+behat/behat               3.17.0             Scenario-oriented BDD framework for PHP
+google/apiclient          1.1.9              Client library for Google APIs
+google/apiclient-services 0.176.0            Client library for Google APIs
+roave/security-advisories dev-master 4aa68d3 Prevents installation of composer packages with known security vulnerabilities: no API, simply require it
+silinternational/php-env  3.2.0              Simple PHP library for getting (or requiring) environment variables, designed to handle true, false, and ...
