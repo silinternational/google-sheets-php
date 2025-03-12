@@ -1,10 +1,9 @@
-version: '2'
 services:
-    test:
-        image: silintl/php8:8.1
-        env_file:
-          - local.env
-        volumes:
-            - ./:/data/
-        working_dir: /data
-        command: vendor/bin/behat
+  test:
+    image: silintl/php8:8.3
+    env_file:
+      - local.env
+    volumes:
+      - ./:/data/
+    working_dir: /data
+    command: vendor/bin/behat
